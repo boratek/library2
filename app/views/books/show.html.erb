@@ -1,0 +1,23 @@
+<h1>Książka</h1>
+<p id="notice"><%= notice %></p>
+
+<div class="content">
+  <h2>Tytuł</h2>
+ <h3><%= @book.title %></h3>
+
+  <h2>Autor</h2>
+ <h3><%= @book.author.full_name %></h3>
+
+  <h2>Kategorie</h2>
+ <% @book.categories.each do |category| %>
+	<h3 class="book_categories">
+	<%= link_to category.name, category %>
+	</h3>
+	<% end %>
+</div>
+
+<div class="nav_show">
+<h3><%= link_to 'Zmień książkę', edit_book_path(@book) %></h3>
+<h3><%= link_to 'Usuń', @book, method: :delete, data: { confirm: 'Na pewno chcesz usunąć książkę?' } %></h3>
+<%= render 'layouts/menu_small' %>
+</div>

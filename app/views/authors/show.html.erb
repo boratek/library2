@@ -1,0 +1,23 @@
+<h1>Autor</h1>
+<p id="notice"><%= notice %></p>
+
+<div class="content">
+  <h2>Imię</h2>
+ <h3><%= @author.first_name %></h3>
+
+  <h2>Nazwisko</h2>
+ <h3> <%= @author.last_name %></h3>
+
+  <h2>Książki</h2>
+<% @author.books.each do |book| %>
+	<h3 class="author_books">
+	<%= link_to book.title, book %>
+	</h3>
+	<% end %>
+</div>
+
+<div class="nav_show">
+<h3><%= link_to 'Zmień', edit_author_path(@author) %></h3>
+<h3><%= link_to 'Usuń', @author, method: :delete, data: { confirm: 'Czy na pewno chcesz usunąć autora?' } %></h3>
+<%= render 'layouts/menu_small' %>
+</div>

@@ -1,0 +1,31 @@
+<h1>Kategorie</h1>
+<%= render 'layouts/menu' %>
+<table>
+  <thead>
+    <tr>
+      <th><h2>Nazwa kategorii</h2></th>
+      <th><h2>Książki</h2></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= link_to category.name, category %></td>
+	<td><% category.books.each do |book| %>
+		<h3 class="category_books">
+		<%= link_to book.title, book %>
+		</h3>
+		<% end %>
+	</td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Dodaj kategorię', new_category_path %>

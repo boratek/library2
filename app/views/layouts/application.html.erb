@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Library</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<span>
+<% if user_signed_in? %>
+<%= link_to "wyloguj", destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to "zaloguj", new_user_session_path %>
+<% end %>
+<%= flash[:notice] %>
+<%= flash[:error] %>
+</span>
+<%= yield %>
+
+</body>
+</html>

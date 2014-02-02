@@ -1,0 +1,20 @@
+<h1>Kategoria</h1>
+<p id="notice"><%= notice %></p>
+
+<div class="content">
+  <h2>Nazwa kategorii</h2>
+ <h3> <%= @category.name %></h3>
+
+  <h2>Książki</h2>
+<% @category.books.each do |book| %>
+                <h3 class="category_books">
+                <%= link_to book.title, book %>
+                </h3>
+                <% end %>
+</div>
+
+<div class="nav_show">
+<h3><%= link_to 'Zmień', edit_category_path(@category) %></h3>
+<h3><%= link_to 'Usuń', @category, method: :delete, data: { confirm: 'Na pewno usunąć kategorię?' } %></h3>
+<%= render 'layouts/menu_small' %>
+</div>

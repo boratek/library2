@@ -1,0 +1,46 @@
+<h1>Autorzy</h1>
+<%= render 'layouts/menu' %>
+<div id="plato">
+<%= image_tag("platon.jpg", :alt => "Platon") %>
+<span class="opis">Platon, 428-348 p.n.e</span>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th><h2>Autorzy</h2></th>
+	<th><h2>Książki</h2></th>    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @authors.each do |author| %>
+      <tr>
+	<td><%= link_to author.full_name, author %></td>
+	<td><% author.books.each do |book| %>
+		<h3 class="author_books">
+		<%= link_to book.title, book %>	
+		</h3> 
+		<% end %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+	<h3 id="a_slide" class="slide">Znajdź autora</h3>
+	<div id="a_search" class="search">
+	<%= search_form_for @q do |f| %>
+        <div class="field">     
+	<h3 class="form_head">Imię</h3>
+	<%= f.text_field :first_name_start %><br>
+	<h3 class="form_head">Nazwisko</h3>
+        <%= f.text_field :last_name_start %>
+	</div>
+        <div class="actions"><%= f.submit "Szukaj" %></div>
+	<% end %>
+	</div>
+<br>
+<span>
+<%= link_to 'Dodaj autora', new_author_path %>
+</span>

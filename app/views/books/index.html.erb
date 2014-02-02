@@ -1,0 +1,46 @@
+<h1>Książki</h1>
+<%= render 'layouts/menu' %>
+<div id="book">
+<%= image_tag("book.jpeg", :alt => "Książka") %>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th><h2>Tytuł</h2></th>
+      <th><h2>Autor</h2></th>
+      <th><h2>Kategoria</h2></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+ <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= link_to book.title, book %></td>
+        <td><%= link_to book.author_description, book.author %></td> 
+	<td><% book.categories.each do |category| %>
+		<h3 class="book_categories">
+		<%= link_to category.name, category %>
+		</h3>
+		<% end %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+	<h3 id="b_slide" class="slide">Znajdź książkę</h3>
+	<div id="b_search" class="search">
+	<%= search_form_for @q do |f| %>
+	<div class="field">
+	<h3 class="form_head">Tytuł</h3>
+	 <%= f.text_field :title_start %>
+	</div>
+	<div class="actions"><%= f.submit "Szukaj" %></div>
+	<% end %>
+	</div>
+<br >
+<span>
+<%= link_to 'Dodaj książkę', new_book_path %>
+</span>

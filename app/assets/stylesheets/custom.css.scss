@@ -1,0 +1,329 @@
+@import "bootstrap";
+
+/*universal*/
+
+$grayMediumLight: #eaeaea;
+$grayLight: #999;
+$grayDarker: #393333;
+$dark: #3E3333;
+
+html {overflow-y: scroll;}
+
+body { padding-top: 60px;}
+
+section {overflow: auto;}
+
+textarea {resize: vertical;}
+
+.center {text-align: center;}
+
+.center h1 {color: $grayMediumLight;
+	margin-bottom: 10px;
+}
+
+/*typography*/
+
+h1, h2, h3, h4, h5, h6{line-height: 1;}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-weight: normal;
+  color: $grayDarker;
+}
+
+h3 {
+  font-size: 1em;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  text-align: left;
+  font-weight: normal;
+  color: $grayDarker;
+  margin-left: 5%;
+  width: 8%;
+}
+
+h3.slide:hover{
+  color: $grayMediumLight;
+  background-color: $dark;
+  text-decoration: none;
+}
+
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+
+    color: $gray;
+    text-decoration: none;
+    &:hover {
+      color: $grayDarker;
+      background-color: #3E3333;
+      	
+    }
+  }
+}
+  small {
+    float: left;
+  }
+
+tbody > tr > td > a {
+	color: $dark;}
+
+tbody > tr > td > a:hover{
+
+	color: $grayMediumLight;
+        background-color: $dark;
+	text-decoration: none;
+	}
+
+tbody > tr > td > a:focus{
+
+	text-decoration: none;
+	color: $dark;
+        background-color: $grayMediumLight;
+	}
+
+span {
+	text-decoration: none;
+        color: $dark;
+        background-color: $grayMediumLight;
+}
+
+span > a:hover {
+	color: $grayMediumLight;
+        background-color: $dark;
+        text-decoration: none;
+}
+span > a:focus {
+	text-decoration: none;
+        color: $dark;
+        background-color: $grayMediumLight;
+}
+
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+
+
+table {
+	margin-left: 5%;
+	margin-top: 7%;
+}
+
+thead{
+	border-bottom: 2px solid $dark;
+}
+
+tbody > tr > td {
+	padding: 2%;
+	width: 30%;
+}
+
+ul.nav {
+	margin-left: 0%;
+	float: left;
+}
+
+.nav > li{
+	display: inline;
+	float: left;
+}
+
+.nav > li > a:focus{
+      color: $dark;
+      background-color: $grayMediumLight;
+}
+
+.nav > li > a:hover{
+	color: $grayMediumLight;
+	background-color: $dark;
+}
+
+div.search{
+	opacity: 0.0;
+	margin: 5%;
+}
+
+div.search.visible {opacity: 1.0;
+	color: $grayMediumLight;
+        background-color: $dark;
+	width: 17%;
+	padding: 3px;
+}
+
+h3.form_head{
+	color: $grayMediumLight;
+	padding: 2px;
+}
+
+div#wpisy{
+	margin-left: 5%;
+}
+
+h3.user {
+	color: $dark;
+        background-color: $grayMediumLight;
+	min-width: 35%;
+}
+
+form#new_user.new_user{
+        color: $grayMediumLight;
+        background-color: $dark;
+        width: 17%;
+        padding: 3px;
+	margin-left: 45%;
+	border-radius: 5%;
+}
+
+form#new_book.new_book{
+	color: $grayMediumLight;
+        background-color: $dark;
+        width: 17%;
+        padding: 3px;
+        margin-left: 42%;
+	border-radius: 5%;
+}
+
+form#new_author.new_author{
+        color: $grayMediumLight;
+        background-color: $dark;
+        width: 17%;
+        padding: 3px;
+        margin-left: 42%;
+        border-radius: 5%;
+}
+
+form#new_category.new_category{
+        color: $grayMediumLight;
+        background-color: $dark;
+        width: 17%;
+        padding: 3px;
+        margin-left: 42%;
+        border-radius: 5%;
+}
+
+form#new_entry.new_entry{
+	color: $grayMediumLight;
+        background-color: $dark;
+        width: 17%;
+        padding: 3px;
+        margin-left: 42%;
+        border-radius: 5%;
+}
+
+div#library{
+	margin-left: 10%;
+	margin-top: 8%;
+	z-index: -1;
+	border-radius: 5%;
+	display: none;
+
+}
+
+div#plato, div#book{
+	float: right;
+	margin-right: 5%;
+}
+span.opis{
+	position: relative;
+	top: 60%;
+	display: inherit;
+	text-align: center;
+}
+
+div.nav_show{
+	border-top: 2px solid $dark;
+	margin-top: 5%;
+	width: 15%;
+}
+
+div.nav_show h3 {
+		width: 100%;
+}
+div.nav_show a{
+	width: 100%;
+	text-decoration:none;
+	color: $dark;
+}
+
+div.nav_show a:hover{
+	color: $grayMediumLight;
+        background-color: $dark;
+}
+
+div.content{
+	margin-left: 15%;
+}
+
+div.content > h3 {
+	width: 100%;
+}
+
+h3.author_books, h3.book_categories, h3.category_books{
+	width: 30%;
+	border-right: 2px solid $dark;
+	display: inline;
+	padding-right: 3%;
+	text-decoration: none;
+	color: $dark;
+}
+
+h3.author_books > a:hover, h3.book_categories > a:hover, h3.category_books > a:hover{
+	color: $grayMediumLight;
+        background-color: $dark;
+	text-decoration: none;
+}
+
+
+form.edit_author, form.edit_book, form.edit_category{
+	color: $grayMediumLight;
+        background-color: $dark;
+        width: 17%;
+        padding: 3px;
+        margin-left: 42%;
+        border-radius: 5%;
+}
